@@ -17,8 +17,8 @@ def generate_typewriter_gif(
     cursor_char="|"
 ):
     frames = []
-    canvas_size = (max(300, font.getlength(text + cursor_char) + 40), 240)
     font = ImageFont.truetype(font_path, font_size)
+    canvas_size = (max(300, font.getlength(text + cursor_char) + 40), 240)
 
     text_color = parse_color(text_color)
     background_color = parse_color(background_color)

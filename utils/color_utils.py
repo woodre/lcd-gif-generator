@@ -8,13 +8,9 @@ def rgb_to_hex(rgb):
 
 def rgb_to_name(rgb):
     """Convert an (R, G, B) tuple to a named color if possible, else hex."""
-    try:
-        name = ImageColor.getcolor(rgb, "RGB")
-        for color_name in ImageColor.colormap:
-            if ImageColor.getrgb(color_name) == rgb:
-                return color_name
-    except ValueError:
-        pass
+    for color_name in ImageColor.colormap:
+        if ImageColor.getrgb(color_name) == rgb:
+            return color_name
     return rgb_to_hex(rgb)
 
 def parse_color(color_input):

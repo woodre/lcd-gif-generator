@@ -1,6 +1,6 @@
 # ui/logic/generator.py
 
-from gif_engine import generate_gif_frames, export_gif
+from ui.gif_engine import generate_gif_frames, export_gif
 from utils.color_utils import parse_color
 from PIL import ImageTk
 import tkinter as tk
